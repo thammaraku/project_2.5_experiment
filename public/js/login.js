@@ -40,6 +40,7 @@ $(document).ready(() => {
   }
 });
 
+// eslint-disable-next-line prettier/prettier
 function onSignIn(googleUser) { // eslint-disable-line no-unused-vars
   const profile = googleUser.getBasicProfile();
   $("#signout-container").show();
@@ -55,6 +56,7 @@ function onSignIn(googleUser) { // eslint-disable-line no-unused-vars
   console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.
 }
 
+// eslint-disable-next-line prettier/prettier
 function signOut() { // eslint-disable-line no-unused-vars
   const auth2 = gapi.auth2.getAuthInstance();
   auth2.signOut().then(() => {

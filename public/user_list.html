@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create/Edit Journal</title>
+
+
+    <!-- jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <!-- GOOGLE MAPS API CAN NOT BE REPLACED WITH DOTENV FILE FOR FRONT END -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRsOs6IB-yF2-v65bR6gYpfIFft1RUM54&libraries=places&callback=initMap&v=weekly"
+        defer></script>
+
+    <!-- BOOTSTRAP CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="./stylesheets/map-style.css" />
+
+    <!-- ICON LIBRARY -->
+    <script src="https://kit.fontawesome.com/f53a07ee43.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Original+Surfer&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <div id="background">
+        <div class="home-screen-fade">
+            <!--Welcome Jumbotron-->
+            <div class="container">
+                <div class="jumbotron">
+                    <h1>Tell Me About Your Travels <span class="member-name"></span>!</h1>
+                </div>
+            </div>
+
+            <!-- BOORSTRAP FOR FULL WIDTH -->
+            <div class="container-fluid" id="entire-card">
+                <div class="row">
+
+                    <!-- Search box on the left three parts-->
+                    <div id="" class="col-md-3 bg-light mt-3 card row-15">
+                        <div>
+                            <!-- Search History -->
+                            <table class="table">
+                                <tbody>
+                                    <tr id="row0"></tr>
+                                    <tr id="row1"></tr>
+                                    <tr id="row2"></tr>
+                                    <tr id="row3"></tr>
+                                    <tr id="row4"></tr>
+                                    <tr id="row5"></tr>
+                                    <tr id="row6"></tr>
+                                    <tr id="row7"></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div>
+                            <!-- <div class="col-md-12 input-group mb-3">
+                                <div style=""><button id="pushBtn">Click to add journal page</button></div>
+                            </div> -->
+                            <div class="col-md-12 input-group mb-3">
+                                <div style=""><a href="user_journal.html"><button id="seeJournalBtn">Add Journal</button></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- main content-->
+                    <div class="col-md-9">
+                        <!-- Map and Journal Content full width-->
+                        <!-- <div class="col-md-12 offset-md-3"></div> -->
+                        <!-- Map -->
+                        <div class="card card-md-12 mt-3 mb-4">
+                            <div id="map" class="row"></div>
+                        </div>
+
+                        <div class="card-md-12 mt-3 mb-4" style="">
+                            <table class="table">
+                                <tbody>
+                                    <tr id="row0"></tr>
+                                    <tr id="row1"></tr>
+                                    <tr id="row2"></tr>
+                                    <tr id="row3"></tr>
+                                    <tr id="row4"></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>                     
+                    <!-- main content-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- google map library -->
+    <script src="./js/list.js"></script>
+
+</body>
+
+</html>

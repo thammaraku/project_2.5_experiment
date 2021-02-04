@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>User Home</title>
+        <!-- Map Scripts -->
+        <script src="http://www.webglearth.com/v2/api.js"></script>
+        <script src="./js/map-home.js"></script>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="../public/stylesheets/user-home.css" />
+    </head>
+    <body onload="initialize()">
+        <div class="homeScreen">
+            <div class="home-screen-fade">
+                <!-- ////////////////////////////////////////////////////////////////////////////////////// -->
+                <!-- Nav Bar -->
+                <nav>
+                    <div class="navcontainer">
+                        <div class="nav-links">
+                            <ul id="nav-links-border1">
+                                <li><a href="Explore">Explore</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo">
+                            <h1><a href="index.html">Travel Journal</a></h1>
+                        </div>
+                        <div class="nav-links">
+                            <ul id="nav-links-border2">
+                                <li><a href="sign-up.html">Journal</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="map-container">
+                    <div class="map">
+                        <div id="earth_div"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,15 +1,13 @@
-$(document).ready(() => {
+$(document).ready(function() {
   // Getting references to our form and inputs
-  const loginForm = $("form.login");
-  const emailInput = $("input#email-input");
-  const passwordInput = $("input#password-input");
-
-  $("#signout-container").hide();
+  var loginForm = $("form.login");
+  var emailInput = $("input#email-input");
+  var passwordInput = $("input#password-input");
 
   // When the form is submitted, we validate there's an email and password entered
-  loginForm.on("submit", event => {
+  loginForm.on("submit", function(event) {
     event.preventDefault();
-    const userData = {
+    var userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
     };
@@ -30,38 +28,12 @@ $(document).ready(() => {
       email: email,
       password: password
     })
-      .then(() => {
-        window.location.replace("/members");
+      .then(function() {
+        window.location.replace("/home");
         // If there's an error, log the error
       })
-      .catch(err => {
+      .catch(function(err) {
         console.log(err);
       });
   }
 });
-
-// eslint-disable-next-line prettier/prettier
-function onSignIn(googleUser) { // eslint-disable-line no-unused-vars
-  const profile = googleUser.getBasicProfile();
-  $("#signout-container").show();
-  // $("#signout-button").hide();
-
-  $("#signin-container").hide();
-  $("#loggedUserImage").attr("src", profile.getImageUrl());
-  $("#loggedUsername").html(profile.getName());
-  $("#loggedUserEmail").html(profile.getEmail());
-  console.log("ID: " + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log("Name: " + profile.getName());
-  console.log("Image URL: " + profile.getImageUrl());
-  console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.
-}
-
-// eslint-disable-next-line prettier/prettier
-function signOut() { // eslint-disable-line no-unused-vars
-  const auth2 = gapi.auth2.getAuthInstance();
-  auth2.signOut().then(() => {
-    console.log("User signed out.");
-    $("#signout-container").hide();
-    $("#signin-container").show();
-  });
-}
